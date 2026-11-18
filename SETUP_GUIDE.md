@@ -20,7 +20,7 @@ cd college-management-system
 1. Start MySQL Server.
 2. Open MySQL Workbench or the MySQL command line.
 3. Run the complete script in database/schema.sql.
-4. In PowerShell, run: Copy-Item .\\src\\main\\resources\\db.properties.example .\\src\\main\\resources\\db.properties
+4. In PowerShell, run: Copy-Item .\src\\main\\resources\\db.properties.example .\src\\main\\resources\\db.properties
 5. Open the copied src/main/resources/db.properties and replace YOUR_MYSQL_PASSWORD with your local MySQL password. The local db.properties file is ignored by Git and should not be committed.
 
 ## 4. Open in NetBeans
