@@ -22,7 +22,7 @@ A beginner-friendly, professional Java web application for an Advanced Java cour
 ## Build and run
 1. Install JDK 21, Apache Maven, MySQL 8+, and Tomcat 10.1.
 2. Create the database by running `database/schema.sql`.
-3. Configure database credentials in `src/main/resources/db.properties`.
+3. Copy `src/main/resources/db.properties.example` to `src/main/resources/db.properties` and set your local MySQL password.
 4. From the project root run `mvn clean package`.
 5. Deploy `target/college-management-system.war` to Tomcat 10.1.
 6. Open `http://localhost:8080/college-management-system/`.
