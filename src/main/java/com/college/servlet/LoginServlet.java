@@ -9,7 +9,7 @@ import com.college.dao.UserDAO;import com.college.model.User;import jakarta.serv
  @Override protected void doPost(HttpServletRequest q,HttpServletResponse r)throws ServletException,IOException{
   String email=q.getParameter("email")==null?"":q.getParameter("email").trim();String password=q.getParameter("password")==null?"":q.getParameter("password");
   try{User user=dao.authenticate(email,password);if(user==null){q.setAttribute("error","Email or password is incorrect.");q.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(q,r);return;}
-   q.changeSessionId();q.getSession(true).setAttribute("user",user);r.sendRedirect(q.getContextPath()+"/dashboard");
+   HttpSession session=q.getSession(true);q.changeSessionId();session.setAttribute("user",user);r.sendRedirect(q.getContextPath()+"/dashboard");
   }catch(Exception ex){throw new ServletException("Unable to sign in. Check database configuration.",ex);}
  }
 }
